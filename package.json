@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "json-server": "json-server --watch Serbook.json --port 3001",
-    "serve": "concurrently \"npm start\" \"npm run json-server\"",
+    "serve": "concurrently \"npm run json-server\" \"npm start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
