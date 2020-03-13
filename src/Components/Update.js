@@ -14,7 +14,7 @@ class Update extends React.Component{
       }
 
    componentDidMount(){
-        axios.get('http://localhost:3000/Store234'+'/'+this.props.id)
+        axios.get('http://localhost:3001/Store234'+'/'+this.props.id)
           .then(res=>{
             
            this.books={
@@ -82,7 +82,7 @@ class Update extends React.Component{
         Genre:this.state.Genre,
         Format:this.state.Format
     };
-    axios.put('http://localhost:3000/Store234'+'/'+this.props.id,this.state.books)
+    axios.put('http://localhost:3001/Store234'+'/'+this.props.id,this.state.books)
     .then(res=>{
         console.log(res);
         console.log(res.data);

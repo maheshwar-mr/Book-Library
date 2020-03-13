@@ -16,7 +16,7 @@ class Display extends React.Component {
     }
  
     componentDidMount(){
-        axios.get('http://localhost:3000/Store234')
+        axios.get('http://localhost:3001/Store234')
           .then(res=>{
             const books=res.data;
            
@@ -25,13 +25,13 @@ class Display extends React.Component {
           })
       }
      delbooks(id){
-        axios.delete('http://localhost:3000/Store234/' +id)
+        axios.delete('http://localhost:3001/Store234/' +id)
         .then(res=>{
             console.log("This id has been deleted"+id);
             alert("The book with id:"+id+"Has been deleted");
             //this.reload();
               return(
-                axios.get('http://localhost:3000/Store234')
+                axios.get('http://localhost:3001/Store234')
               .then(res=>{
               const books=res.data;
               this.setState({books});
